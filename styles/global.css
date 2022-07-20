@@ -1,7 +1,5 @@
 :root {
-    --background: rgb(224, 234, 247);
-    --header-background: white;
-    --footer-background: rgb(243, 242, 242);
+    --background: white;
 }
 
 body {
@@ -9,27 +7,40 @@ body {
     font-family: 'Rubik', san-serif;
     background: var(--background);
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: 1fr 3fr 1fr 1fr 3fr;
+    border: solid black
 }
 
 header {
     position: sticky;
     top: 0;
-    display: flex;
+    display: grid;
+    margin: 0;
+    grid-template-rows: 1fr 3fr 1fr;
     align-items: center;
+    border: solid black 1px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     background-color: var(--header-background);
 }
 
+
 main {
-    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: flex;
+    border: solid black 1px;
 }
 
-footer {
-    position: sticky;
-    bottom: 0;
-    padding: 7px 20px;
-    font-size: .8em;
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--footer-background);
+
+
+.pins {
+    display: inline-grid;
+    border: solid black 1px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
 }
